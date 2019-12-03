@@ -1,0 +1,61 @@
+@font-face {
+  font-family: 'Generica';
+  src: url("../fonts/generica-webfont.woff2") format("woff2"), url("../fonts/generica-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Generica Bold';
+  src: url("../fonts/generica_bold-webfont.woff2") format("woff2"), url("../fonts/generica_bold-webfont.woff") format("woff");
+  font-weight: bold;
+  font-style: normal; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html, body {
+  min-height: 100%; }
+
+body {
+  background-size: cover; }
+
+body {
+  background: #191923;
+  color: white; }
+
+.container {
+  max-width: 85%;
+  margin: 0 auto; }
+
+.navbar {
+  list-style-type: none;
+  background: #1A4DA1;
+  display: inline-block;
+  width: 100%; }
+  .navbar li {
+    float: left; }
+    .navbar li a {
+      display: block;
+      padding: 1em 2em;
+      font-family: 'Generica Bold';
+      text-align: center;
+      text-decoration: none;
+      color: #ECD27A; }
+
+.navbar-right {
+  float: right; }
+  .navbar-right .donate-highlight {
+    background: #ECD27A; }
+    .navbar-right .donate-highlight a {
+      color: #191923; }
+
+.dotted-design {
+  width: 100%;
+  border: 2px solid red;
+  background-image: url("../img/test2.png");
+  background-repeat: repeat-x; }
+
+.decoy-lights {
+  visibility: hidden; }
+
+/*# sourceMappingURL=main.css.map */

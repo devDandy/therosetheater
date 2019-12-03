@@ -1,0 +1,75 @@
+$header-color: #ECD27A;
+$accent-color: #1A4DA1;
+$background-color: #191923;
+
+@font-face {
+    font-family: 'Generica';
+    src: url('../fonts/generica-webfont.woff2') format('woff2'),
+         url('../fonts/generica-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Generica Bold';
+    src: url('../fonts/generica_bold-webfont.woff2') format('woff2'),
+         url('../fonts/generica_bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {min-height: 100%;}
+body {background-size: cover;}
+
+body { 
+    background: $background-color;
+    color: white;
+}
+
+.container {
+    max-width: 85%;
+    margin: 0 auto;
+}
+
+.navbar {
+    list-style-type: none;
+    background: $accent-color;
+    display:inline-block;
+    width:100%;
+    li {
+        float: left;
+        a {
+            display:block;
+            padding: 1em 2em;
+            font-family: 'Generica Bold';
+            text-align: center;
+            text-decoration: none;
+            color: $header-color;
+        }
+    }
+}
+.navbar-right {
+    float: right;
+    .donate-highlight {
+        background:$header-color;
+        a {
+            color: $background-color;
+        }
+    }
+}
+
+.dotted-design {
+    width:100%;
+    border:2px solid red;
+    background-image: url('../img/test2.png');
+    background-repeat: repeat-x;
+}
+.decoy-lights {
+    visibility:hidden;
+}
