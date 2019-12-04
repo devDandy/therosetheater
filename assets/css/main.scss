@@ -39,9 +39,12 @@ body {
 
 .navbar {
     list-style-type: none;
-    background: $accent-color;
     display:inline-block;
+    margin-top: 1em;
+    border-radius: 5px;
     width:100%;
+    background: $accent-color;
+
     li {
         float: left;
         a {
@@ -58,6 +61,8 @@ body {
     float: right;
     .donate-highlight {
         background:$header-color;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
         a {
             color: $background-color;
         }
@@ -66,10 +71,12 @@ body {
 
 .dotted-design {
     width:100%;
-    border:2px solid red;
-    background-image: url('../img/test2.png');
+    margin-top: 1em;
+    background-image: url('../img/theater-lights.png');
     background-repeat: repeat-x;
 }
+/* Invisible because it has height so I don't have to use padding-bottom 
+on .dotted-design class which creates more problems than I need. */
 .decoy-lights {
     visibility:hidden;
 }
