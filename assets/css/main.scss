@@ -1,6 +1,7 @@
 $header-color: #ECD27A;
 $accent-color: #1A4DA1;
 $background-color: #191923;
+$text-color: #FFFFFF;
 
 @font-face {
     font-family: 'Generica';
@@ -24,13 +25,37 @@ $background-color: #191923;
     padding: 0;
     box-sizing: border-box;
 }
-html, body {min-height: 100%;}
-body {background-size: cover;}
 
 body { 
     background: $background-color;
     color: white;
 }
+
+/** CSS GRID **/
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+[class*="col-"] {
+    float: left;
+    padding: 1em;
+  }
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
 
 .container {
     max-width: 85%;
@@ -47,6 +72,7 @@ body {
 
     li {
         float: left;
+
         a {
             display:block;
             padding: 1em 2em;
@@ -54,8 +80,17 @@ body {
             text-align: center;
             text-decoration: none;
             color: $header-color;
+
+            &:hover {
+                background: $header-color;
+                color: $accent-color;
+            }
         }
+
     }
+}
+li:first-child > a {
+    background: red;
 }
 .navbar-right {
     float: right;
@@ -75,8 +110,51 @@ body {
     background-image: url('../img/theater-lights.png');
     background-repeat: repeat-x;
 }
+
+/** HEADER SECTION  **/
 /* Invisible because it has height so I don't have to use padding-bottom 
 on .dotted-design class which creates more problems than I need. */
+
 .decoy-lights {
     visibility:hidden;
+}
+
+.header-column {
+    height: 25em;
+    position: relative;
+    float:right; /* Workaround that makes the text appear first before the logo when viewing on mobile devices */
+}
+.rose-theater-logo {
+    display: block;
+    margin: 2em auto;
+}
+
+.header-information {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    font-family: 'Generica Bold';
+    .header-heading-text {
+        line-height: 1.4
+    }
+    .header-leading-text {
+        line-height: 1.4
+    }
+    h3 {
+        color: $header-color;
+        font-size: 2.5em;
+    }
+    h4 {
+        color: $text-color;
+        font-size: 1.5em;
+        opacity: 0.8;
+        &:first-child {
+            margin-top: 1em;
+        }
+        &:last-child {
+            margin-top: 1em;
+        }
+
+    }
 }
