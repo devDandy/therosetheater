@@ -84,20 +84,30 @@ body {
       text-decoration: none;
       color: #ECD27A; }
       .navbar li a:hover {
-        background: #ECD27A;
+        background: white;
         color: #1A4DA1; }
 
-li:first-child > a {
-  background: red; }
+/* Targets first element in desktop navigation to give border-radius on hover effect */
+.navbar li:first-child > a[href^="#"] {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px; }
+
+/* Targets last element in desktop navigation to give border-radius on hover effect */
+.navbar li:last-child > a[href^="#"] {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px; }
 
 .navbar-right {
   float: right; }
   .navbar-right .donate-highlight {
-    background: #ECD27A;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px; }
     .navbar-right .donate-highlight a {
+      background: #ECD27A;
       color: #191923; }
+      .navbar-right .donate-highlight a:hover {
+        background: white;
+        color: #1A4DA1; }
 
 .dotted-design {
   width: 100%;

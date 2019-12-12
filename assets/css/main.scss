@@ -82,24 +82,36 @@ body {
             color: $header-color;
 
             &:hover {
-                background: $header-color;
+                background: white;
                 color: $accent-color;
             }
         }
 
     }
 }
-li:first-child > a {
-    background: red;
+/* Targets first element in desktop navigation to give border-radius on hover effect */
+.navbar li:first-child > a[href^="#"] {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
+/* Targets last element in desktop navigation to give border-radius on hover effect */
+.navbar li:last-child > a[href^="#"] {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
 .navbar-right {
     float: right;
     .donate-highlight {
-        background:$header-color;
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px;
         a {
+            background:$header-color;
             color: $background-color;
+            &:hover {
+                background: white;
+                color: $accent-color;
+            }
         }
     }
 }
