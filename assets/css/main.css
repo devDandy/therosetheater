@@ -8,6 +8,11 @@
   src: url("../fonts/generica_bold-webfont.woff2") format("woff2"), url("../fonts/generica_bold-webfont.woff") format("woff");
   font-weight: bold;
   font-style: normal; }
+@font-face {
+  font-family: 'Street Cred';
+  src: url("../fonts/streetCred-webfont.woff2") format("woff2"), url("../fonts/streetCred-webfont.woff") format("woff");
+  font-weight: bold;
+  font-style: normal; }
 * {
   margin: 0;
   padding: 0;
@@ -16,6 +21,16 @@
 body {
   background: #191923;
   color: white; }
+
+h1 {
+  font-size: 6em; }
+
+h1, h2 {
+  font-family: 'Street Cred';
+  text-transform: uppercase; }
+
+h3, h4 {
+  word-spacing: .15em; }
 
 /** CSS GRID **/
 .col-1 {
@@ -97,6 +112,9 @@ body {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px; }
 
+.navbar li > a[href^="#donate"] {
+  word-spacing: .2em; }
+
 .navbar-right {
   float: right; }
   .navbar-right .donate-highlight {
@@ -152,5 +170,49 @@ on .dotted-design class which creates more problems than I need. */
       margin-top: 1em; }
     .header-information h4:last-child {
       margin-top: 1em; }
+
+.movie-list {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 250px;
+  background: linear-gradient(#1A4DA1, #06BEE1); }
+
+.movie-row {
+  text-align: center; }
+
+.movie-col {
+  display: inline-block;
+  width: 20%; }
+
+.movie-info-container {
+  position: relative;
+  top: -10em; }
+  .movie-info-container h4 {
+    font-family: 'Generica';
+    font-size: 1.5em;
+    text-align: center; }
+
+.movie-title {
+  font-family: 'Generica Bold';
+  font-size: 1.5em;
+  text-align: center;
+  color: #ECD27A; }
+
+.movie-rating {
+  position: absolute;
+  bottom: 80px;
+  left: 60px;
+  transform: rotate(-90deg);
+  transform-origin: left top 0; }
+
+.movie-image {
+  width: 200px;
+  height: 300px;
+  background: white;
+  margin: 0 auto; }
+
+.header-container {
+  height: 100vh; }
 
 /*# sourceMappingURL=main.css.map */
