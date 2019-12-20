@@ -157,6 +157,11 @@ on .dotted-design class which creates more problems than I need. */
     height: 25em;
     position: relative;
     float:right; /* Workaround that makes the text appear first before the logo when viewing on mobile devices */
+    &:after {
+        content: "";
+        clear: both;  
+        display: table;
+    }
 }
 .rose-theater-logo {
     display: block;
@@ -164,10 +169,11 @@ on .dotted-design class which creates more problems than I need. */
 }
 
 .header-information {
-    position: absolute;
-    top: 50%;
-    left: 35%;
-    transform: translate(-50%, -50%);
+    // position: absolute;
+    // top: 50%;
+    // left: 35%;
+    // transform: translate(-50%, -50%);
+    margin-top: 2em;
     font-family: 'Generica Bold';
     .header-heading-text {
         line-height: 1.4
@@ -194,14 +200,17 @@ on .dotted-design class which creates more problems than I need. */
 }
 
 
-
+.movie-list-container {
+    position: relative;
+    top: 12em;
+    background: linear-gradient(#1A4DA1, #06BEE1);
+    height: 250px;
+    // border:2px solid red;
+}
 
 .movie-list {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 250px;
-    background: linear-gradient(#1A4DA1, #06BEE1);
+    position: relative;
+    top: -1em;
 }
 .movie-row {
     text-align: center;
@@ -212,7 +221,7 @@ on .dotted-design class which creates more problems than I need. */
 }
 .movie-info-container {
     position: relative;
-    top: -10em;
+    top: -7em;
     h4 {
         font-family: 'Generica';
         font-size: 1.5em;
@@ -227,10 +236,10 @@ on .dotted-design class which creates more problems than I need. */
 }
 .movie-rating {
     position: absolute;
-    bottom: 80px;
-    left: 60px;
+    bottom: 33%;
+    left: 13%;
     transform: rotate(-90deg);
-	transform-origin: left top 0;
+    transform-origin: 20% 40%;
 }
 .movie-image {
     width: 200px;
@@ -243,3 +252,44 @@ on .dotted-design class which creates more problems than I need. */
 .header-container {
     height: 100vh;
 }
+
+/* RESPONSIVE MEDIA QUERIES */
+ 
+// Makes movie rating have white space between its text and image
+@media only screen and (max-width: 1730px) { 
+    .movie-rating {
+        left: 9%;
+    }
+}
+// Makes header not so cramped
+@media only screen and (max-width: 1700px) { 
+    .header-information {
+        text-align: center;
+    }
+    .rose-theater-logo {
+        width: 80%;
+    }
+}
+// Makes movie rating have white space between its text and image
+
+@media only screen and (max-width: 1550px) { 
+    .movie-rating {
+        left: 6%;
+    }
+}
+// Prevents the navbar from breaking on another line. Gives breathing room for header section.
+@media only screen and (max-width: 1458px) {
+    .container {
+        max-width: 100%;
+    }
+    .navbar {
+     margin: 0;
+     border-radius: 0;   
+    }
+
+ } 
+
+
+// 1890px <-- pg rating disappears
+// 1458px <-- Nav bar breaks
+// 1366×768 
